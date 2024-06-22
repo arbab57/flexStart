@@ -752,5 +752,15 @@ form textarea {
 }
 
 
+.faq-a {
+    height: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.section-07 i {
+transition: 0.3s;
+}
+
 
 
