@@ -72,10 +72,7 @@ const observerCounter = new IntersectionObserver((entries) => {
         
 entries.forEach((entry) => {
 if (entry.isIntersecting) {
-counterUp(counClients, 232)
-counterUp(counProjects, 514)
-counterUp(counHours, 1465)
-counterUp(counWorkers, 15)
+countUUp() 
 }
 });
     
@@ -83,6 +80,20 @@ counterUp(counWorkers, 15)
     threshold: 0.5
 })
 hiddenElementCounter.forEach((el) => observerCounter.observe(el));
+
+let hasBeenCalled = false;
+
+function countUUp() {
+    if (hasBeenCalled !== true) {
+ counterUp(counClients, 232)
+counterUp(counProjects, 514)
+counterUp(counHours, 1465)
+counterUp(counWorkers, 15)
+hasBeenCalled = true
+}else (
+    null
+)
+}
 
 function counterUp(item, number) {
     let startingNum = 0;
